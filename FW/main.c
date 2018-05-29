@@ -90,6 +90,7 @@ int main (void) {
 		
 		TIMSK0 |= (1<<OCIE0A); //разрешение прерывания по переполнению таймера 1		
 		MCUCR |= (1<<ISC01) | (1<<ISC00); //rising age of INT0
+		//MCUCR |= 1<<ISC00; //any age of INT0
 		GIMSK |= (1<<INT0); //enable INT0
 
 		// Set the prescaler to clock/128 & enable ADC
